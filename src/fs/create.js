@@ -12,7 +12,7 @@ export const create = async () => {
     await file.writeFile('I am fresh and young');
     await file.close();
   } catch (error) {
-    throw new Error('FS operation failed');
+    console.log(new Error('FS operation failed'));
   }
 };
 
