@@ -9,7 +9,7 @@ export const create = async () => {
   try {
     const file = await open(path.join(__dirname, 'files', 'fresh.txt'), 'wx');
 
-    await file.write('I am fresh and young');
+    await file.writeFile('I am fresh and young');
     await file.close();
   } catch (error) {
     throw new Error('FS operation failed');
