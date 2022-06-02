@@ -1,3 +1,8 @@
 export const create = async () => {
-    // Write your code here 
+  try {
+  } catch (error) {
+    throw new Error('FS operation failed');
+  }
 };
+
+create();
