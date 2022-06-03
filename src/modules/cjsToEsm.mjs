@@ -3,7 +3,7 @@ import { release, version } from 'os';
 import { createServer as createServerHttp } from 'http';
 import { createRequire } from 'module';
 import useFilenameDirname from '../utils/useFilenameDirname.mjs';
-import './files/c.mjs';
+import './files/c.js';
 
 const { __filename, __dirname } = useFilenameDirname(import.meta.url);
 const require = createRequire(import.meta.url);
