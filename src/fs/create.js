@@ -2,8 +2,8 @@ import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import { open } from 'fs/promises';
 
-export const __filename = fileURLToPath(import.meta.url);
-export const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export const create = async () => {
   try {
