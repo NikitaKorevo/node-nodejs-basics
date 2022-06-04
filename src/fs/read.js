@@ -6,9 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const read = async () => {
-  readFile(join(__dirname, 'files', 'fileToRead.txt'), { encoding: 'utf-8' })
-    .then((data) => console.log(data))
+  return readFile(join(__dirname, 'files', 'fileToRead.txt'), { encoding: 'utf-8' })
+    .then((data) => data)
     .catch(() => console.log(new Error('FS operation failed')));
 };
 
-read();
+console.log(await read());
