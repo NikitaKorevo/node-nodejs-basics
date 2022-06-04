@@ -6,13 +6,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const list = async () => {
-  readdir(join(__dirname, 'files'))
+  return await readdir(join(__dirname, 'files'))
     .then((fileNames) => {
-      console.log(fileNames);
+      return fileNames;
     })
     .catch(() => {
       console.log(new Error('FS operation failed'));
     });
 };
 
-list();
+console.log(await list());
