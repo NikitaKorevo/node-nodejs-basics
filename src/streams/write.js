@@ -8,7 +8,7 @@ const { __dirname } = useFilenameDirname(import.meta.url);
 export const write = async () => {
   const writeStream = createWriteStream(join(__dirname, 'files', 'fileToWrite.txt'));
 
-  writeStream.on('error', (error) => console.log(error));
+  writeStream.on('error', (error) => console.log(error.message));
   stdin.on('data', (chunk) => writeStream.write(chunk));
 };
 
