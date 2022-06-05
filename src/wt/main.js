@@ -24,7 +24,7 @@ export const performCalculations = async () => {
   }
 
   return await Promise.allSettled(workers).then((workerResults) => {
-    return workerResults.map(({ status, value }) => {
+    return workerResults.map(({ status, value, reason }) => {
       if (status === 'fulfilled') {
         return {
           status: 'resolved',
